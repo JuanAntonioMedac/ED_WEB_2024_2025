@@ -1,3 +1,5 @@
+create database clinica_veterinaria;
+use clinica_veterinaria;
 -- Tabla Mascota
 CREATE TABLE Mascota (
     ID_mascota INT PRIMARY KEY AUTO_INCREMENT,
@@ -9,8 +11,6 @@ CREATE TABLE Mascota (
     FOREIGN KEY (ID_CL) REFERENCES Cliente(ID_CL)
 );
 
-
--- Tabla Ficha Médica
 CREATE TABLE FichaMedica (
     ID_ficha INT PRIMARY KEY AUTO_INCREMENT,
     fecha DATE,
@@ -37,8 +37,8 @@ CREATE TABLE Persona (
 CREATE TABLE Usuario (
     ID_U INT PRIMARY KEY,
     Username VARCHAR(50) UNIQUE,
-    Password VARCHAR(100),
-
+    Password VARCHAR(100)
+);
 CREATE TABLE Cliente (
     ID_CL INT PRIMARY KEY AUTO_INCREMENT,
     ID_U INT UNIQUE,
@@ -61,7 +61,7 @@ CREATE TABLE Usuario_Persona (
     PRIMARY KEY (ID_persona, ID_U),
     FOREIGN KEY (ID_persona) REFERENCES Persona(ID_U),
     FOREIGN KEY (ID_U) REFERENCES Usuario(ID_U)
-
+);
 CREATE TABLE Veterinario (
     ID_VET INT PRIMARY KEY AUTO_INCREMENT,
     ID_U INT UNIQUE,
