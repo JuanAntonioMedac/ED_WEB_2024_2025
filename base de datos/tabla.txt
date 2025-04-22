@@ -1,4 +1,5 @@
 
+
 CREATE TABLE Persona (
     ID_U INT PRIMARY KEY,
     DNI VARCHAR(15),
@@ -13,6 +14,18 @@ CREATE TABLE Usuario (
     ID_U INT PRIMARY KEY,
     Username VARCHAR(50) UNIQUE,
     Password VARCHAR(100),
+
+CREATE TABLE Cliente (
+    ID_CL INT PRIMARY KEY AUTO_INCREMENT,
+    ID_U INT UNIQUE,
+    NumeroMascotas INT,
+    FOREIGN KEY (ID_U) REFERENCES Persona(ID_U)
+);
+
+
+CREATE TABLE Auxiliar (
+    ID_AUX INT PRIMARY KEY AUTO_INCREMENT,
+    ID_U INT UNIQUE,
     FOREIGN KEY (ID_U) REFERENCES Persona(ID_U)
 );
 
@@ -24,4 +37,10 @@ CREATE TABLE Usuario_Persona (
     PRIMARY KEY (ID_persona, ID_U),
     FOREIGN KEY (ID_persona) REFERENCES Persona(ID_U),
     FOREIGN KEY (ID_U) REFERENCES Usuario(ID_U)
+
+CREATE TABLE Veterinario (
+    ID_VET INT PRIMARY KEY AUTO_INCREMENT,
+    ID_U INT UNIQUE,
+    NumeroColegiado VARCHAR(50),
+    FOREIGN KEY (ID_U) REFERENCES Persona(ID_U)
 );

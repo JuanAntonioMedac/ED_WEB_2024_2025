@@ -1,0 +1,24 @@
+-- Tabla Mascota
+CREATE TABLE Mascota (
+    ID_mascota INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    tipoAnimal VARCHAR(30),
+    fechaNacimiento DATE,
+    chip VARCHAR(50),
+    ID_CL INT,
+    FOREIGN KEY (ID_CL) REFERENCES Cliente(ID_CL)
+);
+
+
+-- Tabla Ficha Médica
+CREATE TABLE FichaMedica (
+    ID_ficha INT PRIMARY KEY AUTO_INCREMENT,
+    fecha DATE,
+    sintomas TEXT,
+    tratamiento TEXT,
+    medicacion TEXT,
+    ID_mascota INT,
+    ID_veterinario INT,
+    FOREIGN KEY (ID_mascota) REFERENCES Mascota(ID_mascota),
+    FOREIGN KEY (ID_veterinario) REFERENCES Veterinario(ID_VET)
+);
