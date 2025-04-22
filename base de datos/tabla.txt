@@ -1,0 +1,27 @@
+
+CREATE TABLE Persona (
+    ID_U INT PRIMARY KEY,
+    DNI VARCHAR(15),
+    Nombre VARCHAR(50),
+    Apellidos VARCHAR(50),
+    FechaNacimiento DATE,
+    TipoPersona ENUM('Cliente', 'Auxiliar', 'Veterinario')
+);
+
+
+CREATE TABLE Usuario (
+    ID_U INT PRIMARY KEY,
+    Username VARCHAR(50) UNIQUE,
+    Password VARCHAR(100),
+    FOREIGN KEY (ID_U) REFERENCES Persona(ID_U)
+);
+
+
+CREATE TABLE Usuario_Persona (
+    ID_persona INT,
+    ID_U INT,
+    Tipo_usuario VARCHAR(50),
+    PRIMARY KEY (ID_persona, ID_U),
+    FOREIGN KEY (ID_persona) REFERENCES Persona(ID_U),
+    FOREIGN KEY (ID_U) REFERENCES Usuario(ID_U)
+);
