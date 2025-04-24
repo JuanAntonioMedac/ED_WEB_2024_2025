@@ -14,9 +14,9 @@ CREATE TABLE Mascota (
 CREATE TABLE FichaMedica (
     ID_ficha INT PRIMARY KEY AUTO_INCREMENT,
     fecha DATE,
-    sintomas TEXT,
-    tratamiento TEXT,
-    medicacion TEXT,
+    sintomas VARCHAR(100),
+    tratamiento VARCHAR(100),
+    medicacion VARCHAR(100),
     ID_mascota INT,
     ID_veterinario INT,
     FOREIGN KEY (ID_mascota) REFERENCES Mascota(ID_mascota),
