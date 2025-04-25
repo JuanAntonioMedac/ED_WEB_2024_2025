@@ -9,20 +9,20 @@ package veterinario;
  * @author Jordi Márquez Álvarez
  */
 public class Veterinario extends javax.swing.JFrame {
-        private int iDvete;
+        private int idVete;
         private int numeroColegiado;
 
-    public Veterinario(int iDvete, int numeroColegiado) {
-        this.iDvete = iDvete;
+    public Veterinario(int idVete, int numeroColegiado) {
+        this.idVete = idVete;
         this.numeroColegiado = numeroColegiado;
     }
 
-    public int getiDvete() {
-        return iDvete;
+    public int getidVete() {
+        return idVete;
     }
 
-    public void setiDvete(int iDvete) {
-        this.iDvete = iDvete;
+    public void setidVete(int idVete) {
+        this.iDvete = idVete;
     }
 
     public int getNumeroColegiado() {
