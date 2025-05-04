@@ -20,7 +20,72 @@ import javax.swing.JOptionPane;
  * @author acc31
  */
 public class Fichamedica extends javax.swing.JFrame {
+    private Date date;
+    private String tratamientos;
+    private String medication;
+    private String symptom;
+    private int id_vet;
+    private int id_mascota;
+    
+    public Fichamedica(Date date, String tratamientos, String medication, String symptom, int id_vet, int id_mascota){
+        this.date=date;
+        this.tratamientos=tratamientos;
+        this.medication=medication;
+        this.symptom=symptom;
+        this.id_vet=id_vet;
+        this.id_mascota=id_mascota;
+    }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getTratamientos() {
+        return tratamientos;
+    }
+
+    public void setTratamientos(String tratamientos) {
+        this.tratamientos = tratamientos;
+    }
+
+    public String getMedication() {
+        return medication;
+    }
+
+    public void setMedication(String medication) {
+        this.medication = medication;
+    }
+
+    public String getSymptom() {
+        return symptom;
+    }
+
+    public void setSymptom(String symptom) {
+        this.symptom = symptom;
+    }
+
+    public int getId_vet() {
+        return id_vet;
+    }
+
+    public void setId_vet(int id_vet) {
+        this.id_vet = id_vet;
+    }
+
+    public int getId_mascota() {
+        return id_mascota;
+    }
+
+    public void setId_mascota(int id_mascota) {
+        this.id_mascota = id_mascota;
+    }
+    
+    
+    
     /**
      * Creates new form Fichamedica
      */
@@ -248,7 +313,7 @@ public class Fichamedica extends javax.swing.JFrame {
 
     public void modificarFicha() {
         int filaSeleccionada = jTable2.getSelectedRow();
-        
+
         DefaultTableModel tabla = (DefaultTableModel) jTable2.getModel();
         int idFicha = (int) tabla.getValueAt(filaSeleccionada, 0); // Obtener el ID de la ficha médica
         int idVeterinario = Integer.parseInt(tabla.getValueAt(filaSeleccionada, 3).toString());
@@ -289,7 +354,7 @@ public class Fichamedica extends javax.swing.JFrame {
 
         }
     }
-    
+
     public void actualizarDatos() {
         int filaSeleccionada = jTable2.getSelectedRow();
         DefaultTableModel tabla = (DefaultTableModel) jTable2.getModel();
