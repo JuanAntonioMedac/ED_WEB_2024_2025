@@ -289,6 +289,45 @@ public class Fichamedica extends javax.swing.JFrame {
 
         }
     }
+    
+    public void actualizarDatos() {
+        int filaSeleccionada = jTable2.getSelectedRow();
+        DefaultTableModel tabla = (DefaultTableModel) jTable2.getModel();
+        String sintoma = sintomas.getText();
+        String medica = medicacion.getText();
+        Date fechaFicha = fecha.getDate();
+        java.sql.Date fechaSQL = new java.sql.Date(fechaFicha.getTime());
+        String trata = tratamiento.getText();
+        String seleccionado1 = (String) comboVeterinarios.getSelectedItem();
+        int idV = Integer.parseInt(seleccionado1.split(" - ")[0]); // Extraer el ID
+        String seleccionado2 = (String) comboMascotas.getSelectedItem();
+        int idM = Integer.parseInt(seleccionado2.split(" - ")[0]); // Extraer el ID
+        /*int idM = Integer.parseInt(idMascota.getText());
+        int idV = Integer.parseInt(idVeterinario.getText());*/
+        int idFicha = (int) tabla.getValueAt(filaSeleccionada, 0);
+        System.out.println("ID de ficha a actualizar: " + idFicha);
+        String url = "jdbc:mysql://localhost:3306/clinica_veterinaria";
+        String usuario = "root";
+        String contraseña = "";
+
+        String sql = "UPDATE fichamedica SET fecha = ?, sintomas = ?, tratamiento = ?, medicacion = ?, ID_mascota = ?, ID_veterinario = ? WHERE ID_ficha = ?";
+
+        try (Connection conn = DriverManager.getConnection(url, usuario, contraseña); PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setDate(1, fechaSQL);
+            stmt.setString(2, sintoma);
+            stmt.setString(3, trata);
+            stmt.setString(4, medica);
+            stmt.setInt(5, idM);
+            stmt.setInt(6, idV);
+            stmt.setInt(7, idFicha);
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -595,6 +634,10 @@ public class Fichamedica extends javax.swing.JFrame {
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
         guardarDatos();
+        jPanel1.setVisible(true);
+        jPanel2.setVisible(false);
+        limpiarCampos(jPanel2);
+        cargarFichas();
     }//GEN-LAST:event_guardarActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
@@ -614,7 +657,11 @@ public class Fichamedica extends javax.swing.JFrame {
     }//GEN-LAST:event_comboMascotasActionPerformed
 
     private void guardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar1ActionPerformed
-        // TODO add your handling code here:
+        actualizarDatos();
+        jPanel1.setVisible(true);
+        jPanel2.setVisible(false);
+        limpiarCampos(jPanel2);
+        cargarFichas();
     }//GEN-LAST:event_guardar1ActionPerformed
 
     /**
