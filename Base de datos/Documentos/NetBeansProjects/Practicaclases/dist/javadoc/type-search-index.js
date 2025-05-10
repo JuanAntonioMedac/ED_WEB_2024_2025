@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"practicaClase","l":"main"},{"p":"practicaClase","l":"Moviles"},{"p":"practicaClase","l":"Ordenadores"}];updateSearchResults();
