@@ -11,7 +11,8 @@ nbdist/
 *.log
 *.tmp
 *.swp
-
+*.xml
+*.properties
 # Ignorar archivos de compilación
 *.class
 
