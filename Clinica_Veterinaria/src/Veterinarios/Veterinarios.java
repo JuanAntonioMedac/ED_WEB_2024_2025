@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author acc31
+ * @author japabe
  */
 public class Veterinarios extends javax.swing.JFrame {
     private Date date;
