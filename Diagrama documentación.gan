@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-04-25" view-index="1" gantt-divider-location="351" resource-divider-location="300" version="3.3.3316" locale="es_ES">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nombre" width="200" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="75" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="75" order="2"/>
+        <field id="tpd15" name="Notas" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#cc0000 #cc99ff #9966ff #9999ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="097e4650fa074c40b3a1c244983b78a5" name="Tarea JFernández" color="#9966ff" meeting="false" start="2025-03-25" duration="2" complete="0" expand="true"/>
+        <task id="1" uid="82a8d219c05e4c05b55abf049f34d39e" name="Tarea 2 JFernández" color="#9966ff" meeting="false" start="2025-03-28" duration="2" complete="0" expand="true"/>
+        <task id="2" uid="df364f44f1f741948db4d30311920eeb" name="Tarea 3 JFernández" color="#9966ff" meeting="false" start="2025-04-01" duration="1" complete="0" expand="true"/>
+        <task id="4" uid="974d5107b7294c18a777c7af8432b377" name="Tarea 4 JFernández" color="#9966ff" meeting="false" start="2025-04-04" duration="2" complete="0" expand="true"/>
+        <task id="5" uid="77a18dfc2b6742589add88208a1ccfbd" name="Tarea 5 JFernández" color="#9966ff" meeting="false" start="2025-04-08" duration="2" complete="0" expand="true"/>
+        <task id="6" uid="bad88ffb21e648f6aa40af4379e1df9c" name="Tarea 6 JFernández" color="#9966ff" meeting="false" start="2025-04-11" duration="3" complete="0" expand="true"/>
+        <task id="7" uid="3e8012dadcb346b6832b2b7c05c9b7d5" name="Tarea 7 JFernández" color="#9966ff" meeting="false" start="2025-05-05" duration="1" complete="0" expand="true"/>
+        <task id="8" uid="4fff19152fe047e6be3ac5cba01bea01" name="Tarea 8 JFernández" color="#9966ff" meeting="false" start="2025-05-06" duration="1" complete="0" expand="true"/>
+        <task id="9" uid="042a21bcb7264a3c8938b36d86ce8ac0" name="Tarea 9 JFernández" color="#9966ff" meeting="false" start="2025-05-09" duration="5" complete="0" expand="true"/>
+        <task id="10" uid="b783f5ec507a43b0b7326b78de1ec149" name="Tarea AMarín" color="#9999ff" meeting="false" start="2025-04-11" duration="3" complete="0" expand="true"/>
+        <task id="11" uid="1b50aa543f4643869b7f8165be466401" name="Tarea 2 AMarín" color="#9999ff" meeting="false" start="2025-04-22" duration="3" complete="0" expand="true"/>
+        <task id="12" uid="5d516e54828a4d40bdae911433b30f91" name="Tarea 3 AMarín" color="#9999ff" meeting="false" start="2025-04-25" duration="2" complete="0" expand="true"/>
+        <task id="13" uid="2884114dff964c7381d90003016cba23" name="Tarea 4 AMarín" color="#9999ff" meeting="false" start="2025-05-05" duration="9" complete="0" expand="true"/>
+        <task id="14" uid="01fe1b7719034449af203ab42ded8fd3" name="Tarea EMolinero" color="#cc99ff" meeting="false" start="2025-04-22" duration="1" complete="0" expand="true"/>
+        <task id="15" uid="25e4995d629f41ba862b0978f14ae6b5" name="Tarea 2 EMolinero" color="#cc99ff" meeting="false" start="2025-03-25" duration="1" complete="0" expand="true"/>
+        <task id="16" uid="fa7ff7a9ac3a41578ca24329fa1ae29d" name="Tarea 3 EMolinero" color="#cc99ff" meeting="false" start="2025-04-28" duration="2" complete="0" expand="true"/>
+        <task id="17" uid="91ade6fdbc1e4c9886be062a575689f5" name="Tarea 4 EMolinero" color="#cc99ff" meeting="false" start="2025-04-01" duration="2" complete="0" expand="true"/>
+        <task id="18" uid="107d97f1880a431abeb33683b1c7a344" name="Tarea 5 EMolinero" color="#cc99ff" meeting="false" start="2025-04-04" duration="1" complete="0" expand="true"/>
+        <task id="19" uid="81c350c4c7c443ae9402140e2aa974f1" name="Tarea 6 EMolinero" color="#cc99ff" meeting="false" start="2025-04-08" duration="2" complete="0" expand="true"/>
+        <task id="20" uid="833b3a71771c46a0818207e75616a54a" name="Tarea 7 EMolinero" color="#cc99ff" meeting="false" start="2025-04-11" duration="5" complete="0" expand="true"/>
+        <task id="21" uid="c014df47991e455498a836a9ba384705" name="Tarea RAsencio" color="#cc0000" meeting="false" start="2025-04-10" duration="18" complete="0" expand="true"/>
+        <task id="22" uid="0eeb75fc92354e579223bf8b10a08495" name="Tarea 2 RAsencio" color="#cc0000" meeting="false" start="2025-05-06" duration="5" complete="0" expand="true"/>
+        <task id="24" uid="6d25a4a7bc3646439f7076b6f2710a18" name="Tarea 3 RAsencio" color="#cc0000" meeting="false" start="2025-05-13" duration="1" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Manuel Robles" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Jesús Fernández" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Ángel Marín" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Eduardo Molinero" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Rodrigo Asencio" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="9" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="6" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="7" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="14" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="20" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="16" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="19" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
